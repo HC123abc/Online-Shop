@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap+family=Spinnaker&display=swap" rel="stylesheet">
+    <style>
+           *{
+            box-sizing: border-box;
+            padding: 0px 0px;
+            margin: 0px;
+            
+        }
+        body{
+            background-color: #FDFDFD;
+            height: 800px;
+            overflow-x: hidden;
+            
+        }
+        #colorstrip{
+            width: 100%; 
+            height: auto;
+            background-color: #E4E4E4;
+            
+        }
+        #login h5{
+            position: relative;
+            left: 35px;
+            top:-14px;
+            font-size: 14px;
+            font-family:'Raleway', sans-serif;
+            font-weight:lighter;
+            color: #313131;
+        }
+        #login img{
+            position: relative;
+            top: 9px;
+        }
+        #login {
+            display:inline-block;
+            background-color: #E4E4E4;
+            position: relative;
+            left: 840px;
+            height: auto;
+            width: 100%;
+            margin: 0px;
+        }
+        #login a{
+            text-decoration: none;
+            
+        }
+        a:visited{
+            text-decoration: none;
+            color: #313131;
+        }
+        .vl {
+            border-left: 1px solid #939393;
+            height: 50px;
+            position: absolute;
+            top: -4px;
+            right:422px;
+
+        }
+        #free{
+            font-family:'Raleway', sans-serif ;
+            font-weight: lighter;
+            font-size: 17px;
+            position: relative;
+            left: 955.5px;
+            top: -30px;
+
+        }
+        #vl2{
+            border-left: 1px solid #939393;
+            height: 49px;
+            position: absolute;
+            right: 263px;
+            top: -4px;
+
+        }
+        #cHeading{
+            background-color:#313131;
+            position: relative;
+            top: -20;
+            text-align: center;
+            font-size: 30px;
+            font-family:'Raleway', sans-serif;
+            color: #FDFDFD;
+            padding: 20px 5px;
+        }
+        .sidenav{
+            height: 100%;
+            width: 0;
+            position: fixed;
+            /* z-index is so the side page blocks all the info underneath it */
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #FDFDFD;
+            /* overflow-x removes the buttom scroll bar */
+            overflow-x: hidden;
+            /* transiton make the slide transition to be 0.5 sec(make more smooth) */
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #242323;
+            display: inline-block;
+            /* transition makes the link for items change color more smoothly */
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+        /* change color when hovering over the links*/
+        .sidenav a:hover {
+            color: #dadada;
+        }
+        .remove{
+            font-size: 25px;
+            color: #818181;
+            background-color: transparent;
+            border: none;
+            transition: 0.3s;
+            margin-left: 30px;
+        }
+        .remove:hover{
+            color: #cf2b2b;
+        }
+
+        .sidenav .closebutton {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #stripColor2{
+            height: 68px;
+            position: relative;
+            top: -16px;
+            background-color: #242323;
+        }
+
+        #nav a{
+            color:#939393;
+            text-decoration: none;
+            margin-right: 70px;
+            padding: 0px 10px;
+            font-size: 16px;
+            font-family: 'Spinnaker', sans-serif;
+            position: relative;
+            left: 200px;
+            top: 26px;
+            transition:0.4s;
+        }
+        #nav a:hover{
+            color:#FDFDFD;
+        }
+        #homeHead a{
+            color: #FDFDFD;
+        }
+        #storyName a{
+            color: #FDFDFD;
+            font-size: 19px;
+        }
+        #men h1{
+            text-align: center;
+            position: relative;
+            top: -17px;
+            margin: 0px 0px;
+            font-family: 'Spinnaker', sans-serif;
+            font-size: 22px;
+            background-color: #E4E4E4 ;
+            height: 100px;
+            padding: 40px ;
+        }
+        .container3{
+            position: relative;
+            width: 50%;
+            max-width: 300px;
+        }
+/* Make the image to responsive */
+        .image {
+            display: block;
+            width: 300px;
+            height: 414px;
+        }
+
+    /* The overlay effect - lays on top of the container and over the image */
+        .overlay {
+        position: absolute;
+        bottom: 0;
+        background:#CCBAB6;
+        color: #f1f1f1;
+        width: 300px;
+        transition: .5s ease;
+        opacity:0;
+        color:#988C88;
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+        }
+
+/* When you mouse over the container, fade in the overlay title */
+        .container3:hover .overlay {
+        opacity: 1;
+        }
+
+        #descrip1{
+            font-size: 16px;
+            font-family: "raleway";
+            color:#313131;
+            text-align: left;
+            position: relative;
+            left: -40px;
+            margin-top:0px;
+            width: 300px;
+            padding: 20px 40px;
+        }
+        #item2{
+            position: relative;
+            left: 405px;
+            top: -490px;
+        }
+        #descrip2{
+            font-size: 16px;
+            font-family: "raleway";
+            color:#313131;
+            text-align: left;
+            position: relative;
+            left: 370px;
+            top: -490px;
+            margin-top:0px;
+            width: 300px;
+            padding: 20px 40px;
+        }
+        #item3{
+            position: relative;
+            left: 810px;
+            top: -984px;
+        }
+        #descrip3{
+            font-size: 16px;
+            font-family: "raleway";
+            color:#313131;
+            text-align: left;
+            position: relative;
+            left: 770px;
+            top: -984px;
+            margin-top:0px;
+            width: 300px;
+            padding: 20px 40px;
+        }
+        .itemLink{
+            text-decoration: none;
+        }
+        #menItems{
+            position: relative;
+            left: 124px;
+        }
+        #pay{
+            position: relative;
+            top: 100px;
+            left: 150px;
+            margin-bottom: 50px;
+            font-size: 20px;
+            font-family:"spanniker";
+            padding: 10px 20px;
+        }
+        #pay:hover{
+            background-color: #818181;
+        }
+        #sale{
+            font: 15px;
+            color: #f1f1f1;
+            font-family: "raleway";
+            background-color: #45a37a;
+            padding: 5px 10px;
+            width: 67px;
+            height: 32px;
+            z-index: 1;
+            position: relative;
+            display: inline-block;
+            top:33px ;
+            left: 530px;
+        }
+        #bottomInfo{
+            background-color: #E4E4E4;
+            position: relative;
+            top: -900px;
+            width: 100%;
+            height: 280px;
+        }
+        #bottomInfo a{
+            position: relative;
+            top: 80px;
+            left: 160px;
+            font-size: 26px;
+            color: #939393;
+            text-decoration: none;
+            font-family: "raleway";
+            font-weight: lighter;
+        }
+        #vl4{
+            position: absolute;
+            border-left: 1px solid #939393;
+            height: 230px;
+            left: 400px;
+            top: 30px;
+        }
+        #location{
+            position: relative;
+            left: 580px;
+            font-weight: lighter;
+            font-family: "raleway";
+            color: #939393;
+        }
+        #location h4{
+            position: relative;
+            top:53px;
+            left: -30px;
+            font-size: 17px;
+        }
+        #location p{
+            position: relative;
+            top:100px;
+            left: -30px;
+            font-size: 17px;
+            width: 200px;
+        }
+        #vl5{
+            position: absolute;
+            border-left: 1px solid #939393;
+            height: 230px;
+            left: 300px;
+            top: -1px; 
+        }
+        #contact h4{
+            position: relative;
+            left: 400px;
+            top:-10px;
+            font-size: 17px;
+        }
+        #contact p{
+            position: relative;
+            left: 400px;
+            top:40px;
+            font-size: 17px;
+            width: 200px;
+        }
+        footer{
+            text-align: center;
+            position: relative;
+            background-color: #242323;
+            color: #FDFDFD;
+            top: -900px;
+            width: 100%;
+            height: 50px;
+        }
+        #footerp{
+            position: relative;
+            top: 15px;
+        }
+    </style>
+</head>
+<body>
+      <!-- A strip of color for background -->
+      <div id="colorstrip">
+        <!-- link to login page -->
+        <a href="login.html">
+    <div id="login">
+            <img src="img/black-logo-Computer-Icons-User-profile-Login-Avatar-description-good-it-removebg-preview.png" alt="IconImg" width="24px" height="24px">
+            <h5 id="loginName">Log In</h5>     
+    </div>
+</a>
+    </div>
+<!-- vertical Line -->
+<span class="vl"></span>
+
+<div id="free">
+    <h5>FREE SHIPPING</h5>
+</div>
+<!-- vertical Line -->
+<span id="vl2"></span>
+
+<div id="cart" class="sidenav">
+    <!-- void(0) makes the link stay on the same page because it means the result is undefined -->
+    <!-- when click on X it will close the page -->
+    <a id="cBackg" href="javascript:void(0)" 
+    class="closebutton" onclick="closeNav()">&times;</a>
+    <!-- &times = symbol X -->
+
+    <h3 id="cHeading">Cart</h3>
+    <!-- these are the links for the item yo bought(empty for now but will be replace when you added using javascript) -->
+    <a href="#" id="pro1"></a><button class="remove" onclick="del()"id="one"></button>
+    <br>
+    <a href="#" id="pro2"></a><button class="remove" id="two" onclick="del2()"></button>
+    <br>
+    <a href="#" id="pro3"></a><button class="remove" id="three" onclick="del3()"></button>
+    <br>
+    <a href="#" id="pro4"></a><button class="remove" id="four" onclick="del4()"></button>
+    <br>
+    <a href="#" id="pro5"></a><button class="remove" id="five" onclick="del5()"></button>
+    <br>
+    <a href="#" id="pro6"></a><button class="remove" id="six" onclick="del6()"></button>
+    <br>
+    <a href="#" id="pro7"></a><button class="remove" id="seven" onclick="del7()"></button>
+    <br>
+    <a href="#" id="pro8"></a><button class="remove" id="eight" onclick="del8()"></button>
+    <br>
+    <a href="#" id="pro9"></a><button class="remove" id="nine" onclick="del9()"></button>
+    <br>
+    <button id="pay" onclick="checkout()">Check Out</button>
+    <br>
+  </div>
+  
+  <!-- inline css -->
+  <!-- When click Cart icon it will slide out a page -->
+  <span style="font-size:30px;cursor:pointer; position: absolute; right: 200px; top: 6px;" onclick="openNav()"><img src="img/download-removebg-preview.png" alt="shopping" width="44px"> <p style="font-size: 14px; color: #E4E4E4; position: absolute; right: 18.5px; top: 11px;" id="numOfProduct">0</p></span>
+  
+  <!-- navigation bar -->
+  <div id="stripColor2">
+  <div id="nav">
+      <!-- use spin since it will have different css styling -->
+      <span id="storyName"><a href="home.html">HC FASHION</a></span>
+      <span id="homeHead"><a href="home.html">HOME</a></span>
+      <a href="collection.html">COLLECTION</a>
+      <a href="Customer_Information.html">COSTOMER CARE & INFORMATION </a>
+  </div>
+  </div>
+  <div id="men">
+      <h1>WOMEN</h1>
+  </div>
+  <p id="sale">SALE</p>
+  <div id="menItems">
+  <div class="container3">
+    <!-- link that brings to a internal link (where you buy). Link is the image -->
+    <a class="itemLink" href="buywomen1.html">
+    <img src="img/dress.jpg" alt="Avatar" class="image">
+    <!-- text that will appear whe you hover over the image -->
+    <a href="buywomen1.html"><div class="overlay">View Details</div></a>
+  </div>
+  <div id="descrip1">
+      <h4>SUMMER DRESS OUTFIT</h4>
+      <P>$50.00</P>
+    </a>
+  </div>
+  <div id="item2" class="container3">
+    <a class="itemLink"href="buywomen2.html">
+    <!-- the image (link) -->
+    
+    <img src="img/wcoat.jpg" 
+    alt="Avatar" class="image" >
+    <!-- text that will appear whe you hover over the image -->
+    <a href="buywomen2.html"><div class="overlay">View Details</div></a>
+  </div>
+  <div id="descrip2">
+      <h4>ANIMAL COAT OUTFIT</h4>
+      <P><strike>$120.00</strike> $84.00</P>
+    </a>
+  </div>
+  <div id="item3" class="container3">
+    <a class="itemLink"href="buywomen3.html">
+    <!-- the image (link) -->
+    <img src="img/wtshirt.jpg" 
+    alt="Avatar" class="image" >
+    <!-- text that will appear whe you hover over the image -->
+    <a href="buywomen3.html"><div class="overlay">View Details</div></a>
+  </div>
+  <div id="descrip3">
+      <h4>SPRING T-SHIRT OUTFIT</h4>
+      <P>$60.00</P>
+    </a>
+  </div>
+</div>
+</div>
+<div id="bottomInfo">
+    <a href="#top"><h4>HC FAISHON</h4></a>
+    <span class="vl" id="vl4"></span>
+    <div id="location">
+    <h4>VIST OUR STORE</h4>
+    <p>3401 Dufferin St, Toronto, ON M6A 2T9</p>
+    <span id="vl5"></span>
+    <div id="contact">
+        <h4>CONTACT</h4>
+        <p>harley.cai@student.tdsb.on.ca</p>
+    </div>
+  </div>
+</div>
+<footer>
+    <p id="footerp">&copy HC FASHION MADE BY HARLEY CAI</p>
+</footer>
+  <script>
+    //   make the with of cart to 500px  and make the backgroundcolor gray 
+    function openNav() {
+    document.getElementById("cart").style.width = "500px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+    //   make the with of cart to 0px  and back to normal
+  function closeNav() {
+    document.getElementById("cart").style.width = "0";
+    document.body.style.backgroundColor = "#FDFDFD";
+  }
+// when page load it will extract form local storage
+window.onload = function () {
+   var n=sessionStorage.getItem("name");
+  n=String(n);
+  console.log(n);
+//   if n has more than meaning there is someone's name then it will show
+  if(n.length>4){
+      document.getElementById("loginName").innerHTML=n;
+  }
+  else{
+    document.getElementById("loginName").innerHTML="Log In";
+  }
+// replace the no item to an item in the cart
+  var product= sessionStorage.getItem("product1");
+  product=String(product);
+  console.log(product);
+//   to check if someone add cart
+  if(product.length>4){
+      document.getElementById("pro1").innerHTML=product;
+      document.getElementById("one").innerHTML="&times";
+  }
+  else{
+    document.getElementById("pro1").innerHTML="";
+    document.getElementById("one").innerHTML="";
+  }
+  var product2= sessionStorage.getItem("product2");
+  product2=String(product2);
+  console.log(product2);
+//   to check if someone add cart
+  if(product2.length>4){
+      document.getElementById("pro2").innerHTML=product2;
+      document.getElementById("two").innerHTML="&times";
+  }
+  else{
+    document.getElementById("pro2").innerHTML="";
+    document.getElementById("one").innerHTML="";
+  }
+  var product3= sessionStorage.getItem("product3");
+  product3=String(product3);
+  console.log(product3);
+//   to check if someone add cart
+  if(product3.length>4){
+      document.getElementById("pro3").innerHTML=product3;
+      document.getElementById("three").innerHTML="&times";
+  }
+  else{
+    document.getElementById("pro3").innerHTML="";
+    document.getElementById("three").innerHTML="";
+  }
+  var product4= sessionStorage.getItem("product4");
+  product4=String(product4);
+  console.log(product4);
+//   to check if someone add cart
+  if(product4.length>4){
+      document.getElementById("pro4").innerHTML=product4;
+      document.getElementById("four").innerHTML="&times";
+  }
+  else{
+    document.getElementById("pro4").innerHTML="";
+    document.getElementById("four").innerHTML="";
+  }
+  var product5= sessionStorage.getItem("product5");
+  product5=String(product5);
+  console.log(product5);
+//   to check if someone add cart
+  if(product5.length>4){
+      document.getElementById("pro5").innerHTML=product5;
+      document.getElementById("five").innerHTML="&times";
+  }
+  else{
+    document.getElementById("pro5").innerHTML="";
+    document.getElementById("five").innerHTML="";
+  }
+  var product6= sessionStorage.getItem("product6");
+  product6=String(product6);
+  console.log(product6);
+//   to check if someone add cart
+  if(product6.length>4){
+      document.getElementById("pro6").innerHTML=product6;
+      document.getElementById("six").innerHTML="&times";
+  }
+  else{
+    document.getElementById("pro6").innerHTML="";
+    document.getElementById("six").innerHTML="";
+  }
+  var product7= sessionStorage.getItem("product7");
+  product7=String(product7);
+  console.log(product7);
+//   to check if someone add cart
+  if(product7.length>4){
+      document.getElementById("pro7").innerHTML=product7;
+      document.getElementById("seven").innerHTML="&times";
+  }
+  else{
+    document.getElementById("pro7").innerHTML="";
+    document.getElementById("seven").innerHTML="";
+  }
+  var product8= sessionStorage.getItem("product8");
+  product8=String(product8);
+  console.log(product8);
+//   to check if someone add cart
+  if(product8.length>4){
+      document.getElementById("pro8").innerHTML=product8;
+      document.getElementById("eight").innerHTML="&times";
+  }
+  else{
+    document.getElementById("pro8").innerHTML="";
+    document.getElementById("eight").innerHTML="";
+  }
+  var product9= sessionStorage.getItem("product9");
+  product9=String(product9);
+  console.log(product9);
+//   to check if someone add cart
+  if(product9.length>4){
+      document.getElementById("pro9").innerHTML=product9;
+      document.getElementById("nine").innerHTML="&times";
+  }
+  else{
+    document.getElementById("pro9").innerHTML="";
+    document.getElementById("nine").innerHTML="";
+  }
+//   this will change the number on the cart coresponding to number of items
+  var num1=sessionStorage.getItem("num1");
+  if(num1===NaN || num1===undefined){
+      num1=0;
+  }
+  else{
+  num1= Number(num1);}
+
+  var num2=sessionStorage.getItem("num2");
+  if(num2===NaN || num2===undefined){
+      num2=0;
+  }
+  else{
+  num2= Number(num2);}
+
+  var num3=sessionStorage.getItem("num3");
+  if(num3===NaN || num3===undefined){
+      num3=0;
+  }
+  else{
+  num3= Number(num3);}
+
+  var num4=sessionStorage.getItem("num4");
+  if(num4===NaN || num4===undefined){
+      num4=0;
+  }
+  else{
+  num4= Number(num4);}
+
+  var num5=sessionStorage.getItem("num5");
+  if(num5===NaN || num5===undefined){
+      num5=0;
+  }
+  else{
+  num5= Number(num5);}
+
+  var num6=sessionStorage.getItem("num6");
+  if(num6===NaN || num6===undefined){
+      num6=0;
+  }
+  else{
+  num6= Number(num6);}
+
+  var num7=sessionStorage.getItem("num7");
+  if(num7===NaN || num7===undefined){
+      num7=0;
+  }
+  else{
+  num7= Number(num7);}
+
+  var num8=sessionStorage.getItem("num8");
+  if(num8===NaN || num8===undefined){
+      num8=0;
+  }
+  else{
+  num8= Number(num8);}
+
+  var num9=sessionStorage.getItem("num9");
+  if(num9===NaN || num9===undefined){
+      num9=0;
+  }
+  else{
+  num9= Number(num9);
+  }
+  console.log(num1);
+  console.log(num2);
+  console.log(num3);
+  console.log(num4);
+  console.log(num5);
+  console.log(num6);
+  console.log(num7);
+  console.log(num8);
+  console.log(num9);
+
+  totNum=num1+num2+num3+num4+num5+num6+num7+num8+num9;
+  console.log(totNum);
+  if(totNum>0){
+      document.getElementById("numOfProduct").innerHTML=totNum;
+  }
+  else{
+    document.getElementById("numOfProduct").innerHTML="0";
+  }
+
+}
+function del(){
+    document.getElementById('pro1').innerHTML="Removed";
+}
+function del2(){
+    document.getElementById('pro2').innerHTML="Removed";
+}
+function del3(){
+    document.getElementById('pro3').innerHTML="Removed";
+}
+function del4(){
+    document.getElementById('pro4').innerHTML="Removed";
+}
+function del5(){
+    document.getElementById('pro5').innerHTML="Removed";
+}
+function del6(){
+    document.getElementById('pro6').innerHTML="Removed";
+}
+function del7(){
+    document.getElementById('pro7').innerHTML="Removed";
+}
+function del8(){
+    document.getElementById('pro8').innerHTML="Removed";
+}
+function del9(){
+    document.getElementById('pro9').innerHTML="Removed";
+}
+function checkout(){
+location.href="checkout.html";
+}
+  </script>
+</body>
+</html>

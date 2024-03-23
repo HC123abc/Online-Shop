@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style> *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-color:#fff; 
+        font-family: "Raleway";
+    }
+    #title{
+        text-align: center;
+        margin-top: 40px;
+        color:#FFCA28;
+        font-size: 40px;
+        
+    }
+
+    /* making the container */
+    #container1{
+        background-color: #FDF9BA;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px;
+        height: 330px;
+    }
+    #heading{
+        color:#2c2c2c;
+        text-align: center;
+        margin-top:50px;
+        margin-bottom:30px ;
+    }
+    /* standarding the text */
+    .form{
+        color: #2c2c2c;
+        margin-top: 10px;
+        font-size: 20px;
+        font-family: "motserrat";
+        
+    }
+    /* standarding the input box */
+    .form input{
+        padding-top:10px;
+        border:#DBD6AA 1px solid;
+        border-radius: 5px;
+        width: 260px;
+        
+    }
+    #error{
+            font-size: 12px;
+            color: red;
+        } 
+        /* make text in the center */
+        #button{
+            text-align: center;
+            padding: 50px;
+        
+        /* make submit at the location and color */
+        }
+        #submit{
+            margin-left: auto;
+            margin-right: 30px;
+            padding: 7px;
+            border:#DBD6AA 1px solid;
+            border-radius: 5px;
+            background-color: #FDF9BA;
+            color: #2c2c2c;
+
+        }
+        #submit:hover{
+            background-color: #2c2c2c;
+            color: #FDF9BA;
+        }
+
+        #reset{
+            border:#DBD6AA 1px solid;
+            border-radius: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 7px;
+            background-color: #FDF9BA;
+            color: #2c2c2c;
+
+        }
+        /* change color */
+        #reset:hover{
+            background-color: #2c2c2c;
+            color: #FDF9BA;
+        }
+        /* center */
+        #reg{
+           text-align: center;
+            margin-top:30px ;
+        }
+        /* change color link */
+        #reg a{
+            color:#313131 ;
+            text-decoration: none;
+        }
+        /* make font bigger smoothy */
+        #reg a:hover{
+            font-weight: bolder;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">HC FASHION</h1>
+   
+<h2 id="heading">Log In</h2>
+<div id="container1">
+<form action="home.html" method="GET">
+    <div id="form1">\
+        <div class="form" id="long">
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" id="email">
+        </div>
+        <br>
+        <br>
+        <div class="form">
+            <label for="pass1">Password</label>
+            <br>
+            <input type="password" name="pass1" id="pass1">
+            <p id="error"></p>
+        </div>
+        
+    </div>
+    <div id="button">
+        <input id="submit" onclick="check()" type="button" value="Log-In">
+        <input id="reset" type="reset" value="Reset">
+</div>
+</div>
+</form>
+<!-- link to sign up page -->
+<div id="reg">
+    <a href="Formreg.html">Don't Have, Create New Account</a>
+</div>
+<script>
+ var email=sessionStorage.getItem('email');
+ var email=String(email);
+ console.log(email);
+ var p=sessionStorage.getItem('pass');
+ var p=String(p);
+ console.log(p);
+ var pass=document.getElementById('pass1').value;
+ var email1=document.getElementById("email").value;
+ errortext="Password or Email does not match";
+ function check(){
+     if(pass===p){
+        window.location.href="home.html";
+     }
+     else{
+         document.getElementById('error').innerHTML=errortext;
+     }
+ }
+</script>
+</body>
+</html>

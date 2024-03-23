@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&family=Roboto:wght@900&family=Lato:wght@300;400&family=Raleway:wght@300;600&family=Spartan:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color:#fff; 
+            font-family: "Raleway";
+        }
+        #title{
+            text-align: center;
+            margin-top: 80px;
+            color:#FFCA28;
+            font-size: 40px;
+            
+        }
+
+        /* making the container */
+        #container1{
+            background-color: #FDF9BA;
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 40px;
+        }
+        #heading{
+            color:#2c2c2c;
+            text-align: center;
+            margin-top:100px;
+            margin-bottom:30px ;
+        }
+        /* standarding the text */
+        .form{
+            color: #2c2c2c;
+            margin-top: 10px;
+            font-size: 20px;
+            font-family: "motserrat";
+            
+        }
+        /* standarding the input box */
+        .form input{
+            padding-top:10px;
+            border:#DBD6AA 1px solid;
+            border-radius: 5px;
+            
+        }
+        /* making input box biger */
+        #long input{
+            width: 260px;
+        }
+        /* making input box biger */
+        #ad input{
+            width: 260px;
+        }
+        /* making input box biger */
+        #num input{
+            width: 260px;
+        }
+        #right{
+            position: relative;
+            left: 30px;
+        }
+        #form1 h3{
+            margin-bottom:10px;
+            font-size: 25px;
+            text-align: center;
+        }
+        /* centering */
+        #form1 p{
+            text-align: center;
+            color: #2c2c2c;
+        }
+        /* positioning the text"first name" lower and make it smaller */
+        #name{
+            font-size: 12px;
+            margin-top:5px;
+        }
+        /* positioning the text"first name" lower and make it smaller */
+        #lastN{
+            position: relative;
+            left: 123px;
+        }
+        #error{
+            font-size: 12px;
+            color: red;
+        }
+        #error2{
+            font-size: 12px;
+            color: red;
+        }
+      
+        #button{
+            text-align: center;
+            padding: 50px;
+        
+        }
+        #submit{
+            margin-left: auto;
+            margin-right: 30px;
+            padding: 7px;
+            border:#DBD6AA 1px solid;
+            border-radius: 5px;
+            background-color: #FDF9BA;
+            color: #2c2c2c;
+
+        }
+        #submit:hover{
+            background-color: #2c2c2c;
+            color: #FDF9BA;
+        }
+        #reset{
+            border:#DBD6AA 1px solid;
+            border-radius: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 7px;
+            background-color: #FDF9BA;
+            color: #2c2c2c;
+
+        }
+        #reset:hover{
+            background-color: #2c2c2c;
+            color: #FDF9BA;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="title">HC FASHION</h1>
+   
+<h2 id="heading">Sign Up Online Form</h2>
+<div id="container1">
+    
+<form action="" method="POST">
+    <div id="form1">
+            <h3>Personal Information</h3>
+            <p>Please fill out this form</p>
+            <form action="">
+            <div class="form">
+            <label for="name">Name</label>
+            <br>
+            <input type="text" name="firstName" id="firstName">
+            <input type="text" name="lastName" id="lastName">
+            <br>
+            <div id="name">
+            <label  for="firstName">First Name</label>
+            <label id="lastN" for="lastName">Last Name</label>
+        </div>
+        </div>
+            <br>
+            <br>
+            <div class="form" id="ad">
+            <label for="address">Address</label>
+            <br>
+            <input type="text" name="address" id="address">
+        </div>
+            <br>
+            <br>
+            <div class="form" id="num">
+            <label for="phoneNumber">Phone Number</label>
+            <br>
+            <input type="tel" name="phone#" id="phoneNumber">
+        </div>
+        <br>
+        <br>
+        <div class="form" id="long">
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" id="email">
+        </div>
+        <br>
+        <br>
+        <div class="form">
+            <label for="pass1">Password</label>
+            <br>
+            <input type="password" name="pass1" id="pass1">
+            <label id="error2" for="error"></label>
+        </div>
+        <br>
+        <br>
+        <div class="form">
+            <label for="pass2">Confirm Password</label>
+            <br>
+            <input type="password" name="pass2" id="pass2">
+            <label id="error" for="error"></label>
+        </div>
+    <div id="button">
+            <input id="submit" onclick="check();testJS()" type="button" value="Sign Up">
+            <input id="reset" type="reset" value="Reset">
+    </div>
+    </form>
+
+    <script>
+        // check password
+
+        function check(){
+        var password = document.getElementById("pass1").value;
+        var password2=document.getElementById('pass2').value;
+        var errorText = "Password does not Match";
+        var errorText2= "Too short (Min 4)";
+        var name=document.getElementById('firstName').value;
+        // if too short error text shows
+        
+        if(password.length<=4){
+            document.getElementById('error2').innerHTML=errorText2;
+            }
+        // meet lenght requirement then no text shows
+        else {
+             document.getElementById("error2").innerHTML="";
+         } 
+           // if not same error text will pop up
+          if (password===password2){
+            document.getElementById('error').innerHTML="";
+            }
+            //    if all good it go to the website
+        else {
+             document.getElementById('error').innerHTML=errorText;
+            } 
+        if(password.length>=4 && password===password2){
+            var b = document.getElementById('firstName').value,
+            url = 'home.html?name=' + encodeURIComponent(b);
+    
+        document.location.href = url;
+        }
+        
+    }
+    // store name in local
+    function testJS(){
+        var b = document.getElementById('firstName').value;
+        b=String(b);
+        sessionStorage.setItem("name",b);
+        var password1 = document.getElementById("pass2").value;
+        password1=String(password1);
+        sessionStorage.setItem("pass",password1);
+        var email1=document.getElementById('email').value;
+        email1=String(email1);
+        sessionStorage.setItem("email",email1);
+
+    }
+    </script>
+    
+</body>
+</html>
